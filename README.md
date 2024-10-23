@@ -1,0 +1,2 @@
+# RecoMed
+Medication Recommendation System
