@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    /* Hero Banner */
+    .hero-banner {
+      background-image: url('https://source.unsplash.com/1600x900/?technology,ai'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-banner h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      margin-bottom: 10px;
+    }
+
+    .hero-banner p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: #f4f6f9;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-image img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      max-width: 600px;
+      margin: 20px;
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .about-text button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .about-text button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Section content */
+    .section-content {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e3f2fd;
+      border-radius: 8px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pop-up {
+      animation: popup 0.5s ease forwards;
+    }
+
+    @keyframes popup {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-banner">
+    <div>
+      <h1>Meet your developer</h1>
+      <p>Your AI and Machine Learning Engineer, turning vision into reality through cutting-edge technology</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="container about-section">
+    <div class="about-image">
+      <img src="https://source.unsplash.com/200x200/?person" alt=" image "> <!-- Placeholder for your picture -->
+    </div>
+    <div class="about-text">
+      <h3>About RecoMed developer</h3>
+      <p>Hello, We Abhishek And Abhisht, the Web Developer and ML engineer with some  experience . I'm passionate about harnessing the power of technology to make a positive impact on people's lives.</p>
+      <button onclick="toggleSection('expertise')">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Expertise Section (hidden by default) -->
+  <div id="expertise" class="section-content container">
+    <h5>My Expertise</h5>
+    <p>With a strong academic background in computer science and a deep fascination for AI and ML, I embarked on a journey that has taken me across the globe, working on diverse and innovative projects. Over the years, I've had the privilege of collaborating on international projects that have pushed the boundaries of what's possible in AI and ML.</p>
+  </div>
+
+  <!-- Additional sections can be added in the same way -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+        section.classList.add('pop-up');
+      } else {
+        section.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
